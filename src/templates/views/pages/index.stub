@@ -1,0 +1,21 @@
+@extends('{{layout}}')
+
+@section('content')
+    <h1>{{$title->plural}}</h1>
+
+    @if($items->count())
+        <ul>
+            @foreach($items as $item)
+            <li>
+                @component('{{title}}._item', ['item' => $item, 'route' => $route])
+                    @endcomponent
+            </li>
+            @endforeach
+        </ul>
+        {{pagination}}
+    @else
+        <p>There are no items to show.</p>
+    @endif
+
+    <a href="{{route("$route.create")}}">Create new {{$title->singular}}</a>
+@endsection

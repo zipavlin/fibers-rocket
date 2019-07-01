@@ -1,0 +1,17 @@
+<?php
+
+namespace {{namespace}};
+
+use Illuminate\Database\Eloquent\Model;
+{{imports}}
+class {{name}} extends Model
+{
+    {{use}}
+    {{fillable}}
+    {{hidden}}
+    {{casts}}
+    {{dates}}
+    {{with}}
+
+{{relationships}}
+}

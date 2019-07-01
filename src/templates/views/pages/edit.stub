@@ -1,0 +1,16 @@
+@extends('{{layout}}')
+
+@section('content')
+    <h1>Edit {{$title->singular}}</h1>
+
+    <form action="{{route("$route.update", ['id' => $item->id])}}" method="post">
+        @csrf
+        @method('PUT')
+
+        @component('{{title}}._form', ['item' => $item])
+        @endcomponent
+
+        <a href="{{route("$route.index")}}">Back</a>
+        <button type="submit">Update</button>
+    </form>
+@endsection

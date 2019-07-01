@@ -1,0 +1,30 @@
+@extends('{{layout}}')
+
+@section('content')
+    <div class="container mt-5">
+        <h1>{{$title->plural}}</h1>
+
+        <div class="card mt-4">
+            @if($items->count())
+                <ul class="list-group list-group-flush">
+                    @foreach($items as $item)
+                    <li class="list-group-item">
+                        @component('{{title}}._item', ['item' => $item, 'route' => $route])
+                            @endcomponent
+                    </li>
+                    @endforeach
+                </ul>
+            @else
+                <div class="card-body">There are no items to show.</div>
+            @endif
+
+            <div class="card-footer">
+                <div class="row align-items-start justify-content-between pl-3 pr-3">
+                    {{pagination}}
+                    <a href="{{route("$route.create")}}" class="btn btn-primary float-right">Create new {{$title->singular}}</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+@endsection

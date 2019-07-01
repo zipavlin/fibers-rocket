@@ -1,0 +1,8 @@
+{{content}}
+<a href="{{route("$route.show", ['id' => $item->id])}}">View</a>
+<a href="{{route("$route.edit", ['id' => $item->id])}}">Edit</a>
+<form action="{{route("$route.destroy", ['id' => $item->id])}}" method="post">
+    @method('DELETE')
+    @csrf
+    <button>Delete</button>
+</form>

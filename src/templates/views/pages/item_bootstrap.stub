@@ -1,0 +1,10 @@
+{{content}}
+<div class="float-right">
+    <a href="{{route("$route.show", ['id' => $item->id])}}" class="btn btn-sm btn-link">View</a>
+    <a href="{{route("$route.edit", ['id' => $item->id])}}" class="btn btn-sm btn-link">Edit</a>
+    <form action="{{route("$route.destroy", ['id' => $item->id])}}" method="post" style="display: inline;">
+        @method('DELETE')
+        @csrf
+        <button class="btn btn-sm btn-link">Delete</button>
+    </form>
+</div>

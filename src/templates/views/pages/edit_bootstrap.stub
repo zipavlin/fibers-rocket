@@ -1,0 +1,22 @@
+@extends('{{layout}}')
+
+@section('content')
+    <div class="container mt-5">
+        <h1>Edit {{$title->singular}}: {{$item->id}}</h1>
+
+        <form action="{{route("$route.update", ['id' => $item->id])}}" method="post" class="card mt-4">
+            @csrf
+            @method('PUT')
+
+            <div class="card-body border-bottom">
+                @component('{{title}}._form', ['item' => $item])
+                @endcomponent
+            </div>
+
+            <div class="card-footer text-muted">
+                <a href="{{route("$route.index")}}" class="btn btn-outline-primary">Back</a>
+                <button class="btn btn-primary float-right" type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+@endsection

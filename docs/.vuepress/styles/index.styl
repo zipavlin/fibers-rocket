@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,600&display=swap')
+.navbar
+    box-shadow 0 0 5px rgba(0,0,0,.1)
+    border-bottom none
+    .site-name
+        display none !important
+.search-box
+    input
+        border 1px solid #374785 !important
+.custom-block
+    &.tip
+        background-color #f0f5fa
+        border-left-color #5ca2d5
+    &.tip, &.warning, &.danger
+        padding 0.15rem 1rem 0.1rem
+        border-left-width 4px
+        border-radius 0 6px 6px 0;
+        p
+            margin .5em 0
+.narrow
+    td
+        padding 4px 1em
+#main-title
+    display: none !important
+.nav-links
+    a
+        color #374785 !important
+        font-weight 600
+        &:hover, &.router-link-active
+            border-bottom-color #D93F87 !important
+.sidebar
+    border-right none
+    background-color #f9f9f9
+    border-left 5px solid #374785
+a.sidebar-link
+    color #374785 !important
+    &.active
+        color #D93F87 !important
+        font-weight 600 !important
+        border-left-color transparent !important;
+html
+    background-color #f9f9f9
+body
+    background-color #f9f9f9
+    font-family 'Nunito'
+    font-weight 300
+h1
+    color #374785
+h2
+    color #5CA2D5
+code
+    white-space nowrap
+pre code
+    white-space unset

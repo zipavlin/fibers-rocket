@@ -1,0 +1,21 @@
+@extends('{{layout}}')
+
+@section('content')
+    <div class="container mt-5">
+        <h1>Showing {{$title->singular}}: {{$item->id}}</h1>
+
+        <div class="card mt-4">
+            <ul class="list-group list-group-flush">
+                @foreach($item->getAttributes() as $key => $value)
+                    <li class="list-group-item">
+                        <strong>{{$key}}:</strong> {{$value}}
+                    </li>
+                @endforeach
+            </ul>
+            <div class="card-footer text-muted">
+                <a href="{{route("$route.index")}}" class="btn btn-outline-primary">Back</a>
+            </div>
+        </div>
+
+    </div>
+@endsection

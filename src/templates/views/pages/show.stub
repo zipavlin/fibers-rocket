@@ -1,0 +1,13 @@
+@extends('{{layout}}')
+
+@section('content')
+    <h1>Show {{$title->singular}}</h1>
+
+    <ul>
+        @foreach($item->getAttributes() as $key => $value)
+            <li><strong>{{$key}}:</strong> {{$value}}</li>
+        @endforeach
+    </ul>
+
+    <a href="{{route("$route.index")}}">Back</a>
+@endsection

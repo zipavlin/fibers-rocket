@@ -1,0 +1,21 @@
+@extends('{{layout}}')
+
+@section('content')
+    <div class="container mt-5">
+        <h1>Create a new {{$title->singular}}</h1>
+
+        <form action="{{route("$route.store")}}" method="post" class="card mt-4">
+            @csrf()
+
+            <div class="card-body border-bottom">
+                @component('{{title}}._form', ['item' => null])
+                @endcomponent
+            </div>
+
+            <div class="card-footer text-muted">
+                <a href="{{route("$route.index")}}" class="btn btn-outline-primary">Back</a>
+                <button class="btn btn-primary float-right" type="submit">Create</button>
+            </div>
+        </form>
+    </div>
+@endsection

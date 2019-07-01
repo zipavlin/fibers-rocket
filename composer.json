@@ -1,0 +1,29 @@
+{
+    "name": "fibers/rocket",
+    "description": "Laravel development tool for rapid app development with smart model, migration, controller and views scaffolding.",
+    "type": "laravel-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Žiga Pavlin",
+            "email": "ziga.pavle@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "fibers/helper": "0.1.*",
+        "laravel/framework": "5.8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fibers\\Rocket\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fibers\\Rocket\\FibersRocketServiceProvider"
+            ]
+        }
+    }
+}
