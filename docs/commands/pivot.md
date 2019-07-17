@@ -4,7 +4,7 @@
 php artisan fibers:pivot <Model> <Model>
 ```
 
-Pivot command will create a pivot table, connection two model. It runs [migration command](/commands/migration) internally.
+Pivot command will create a pivot table, connection two model. It runs [migration command](/fibers-rocket/commands/migration) internally.
 
 ## Parameters
 | Parameter | Description |

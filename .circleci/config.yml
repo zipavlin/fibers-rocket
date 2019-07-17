@@ -1,0 +1,74 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  docs-build:
+    docker:
+      - image: circleci/node:10.15.2
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Build docs using vuepress
+          command: yarn run docs:build
+      - run:
+          name: List all files
+          command: |
+            ls docs/.vuepress/dist
+            git status
+      - persist_to_workspace:
+          root: docs/.vuepress
+          paths: dist
+
+  docs-deploy:
+    docker:
+      - image: node:8.10.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: docs/.vuepress
+      - run:
+          name: Disable jekyll builds
+          command: touch docs/.vuepress/dist/.nojekyll
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages@2.0.1
+            git config user.email "ziga.pavle@gmail.com"
+            git config user.name "Žiga Pavlin"
+      - run:
+          name: List all files
+          command: |
+            ls docs/.vuepress/dist
+            git status
+      - add_ssh_keys:
+          fingerprints:
+            - "54:d5:0a:2f:f9:dd:b1:a8:c3:0a:2c:34:f4:89:95:25"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist docs/.vuepress/dist
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - docs-build:
+          filters:
+            branches:
+              only: master
+      - docs-deploy:
+          requires:
+            - docs-build
+          filters:
+            branches:
+              only: master

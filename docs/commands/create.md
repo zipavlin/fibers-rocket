@@ -14,7 +14,7 @@ Fibers Rocket - Create will create a (full) mvc package of files. This command r
 * ~~**admin**: Scaffold admin interface~~ (not yet implemented)
 
 ::: warning
-When creating a model it's migration will be automatically migrated. **Take extra care when setting attributes using [**_attribute input_**](/attributes).**
+When creating a model it's migration will be automatically migrated. **Take extra care when setting attributes using [**_attribute input_**](/fibers-rocket/attributes).**
 :::
 
 ## Parameters

@@ -1,4 +1,5 @@
 module.exports = {
+    base: '/fibers-rocket/',
     title: 'Fibers Rocket',
     description: 'Laravel development tool for rapid app development with smart model, migration, controller and views scaffolding.',
     theme: '@vuepress/theme-default',

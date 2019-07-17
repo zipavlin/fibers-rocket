@@ -4,7 +4,7 @@
 php artisan fibers:guard <Title> [Options]
 ```
 
-Guard command will create a [FormRequest](https://laravel.com/docs/validation#form-request-validation), automatically populating _rules_ array with attributes collected from a [model](/commands/model).
+Guard command will create a [FormRequest](https://laravel.com/docs/validation#form-request-validation), automatically populating _rules_ array with attributes collected from a [model](/fibers-rocket/commands/model).
 
 ::: tip
 Set targeted model by using `--target=` options to skip model input prompt.

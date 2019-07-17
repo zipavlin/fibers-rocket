@@ -6,7 +6,7 @@ php artisan fibers:model <Title> [Options]
 
 Fibers Rocket considers [Models](https://laravel.com/docs/eloquent) to be a first-class citizens (alongside its table) and are it's entry point into your application when fetching required information. Models are used to smartly populate data when creating controllers, layours, guards, etc.  
 
-Model will be created either in `app` or `app/Models` folder, depending on location of other models, it's namespace will be set accordingly, it's attributes will be [appropriately cast](/attributes#types) and relationships will be set.  
+Model will be created either in `app` or `app/Models` folder, depending on location of other models, it's namespace will be set accordingly, it's attributes will be [appropriately cast](/fibers-rocket/attributes#types) and relationships will be set.  
 
 Some attributes will be ignored by default and will not have corresponding fields and will not be cast:
 * id
@@ -28,7 +28,7 @@ Attributes are automatically added to _fillable_ array for fast prototyping (unl
 :::
 
 ## Attribute Input
-Model creation is simple, but does require user's help to set appropriate attributes. This multiline input uses simplified (but modified) migration syntax. **Read more about attribute input [**here**](/attributes).**  
+Model creation is simple, but does require user's help to set appropriate attributes. This multiline input uses simplified (but modified) migration syntax. **Read more about attribute input [**here**](/fibers-rocket/attributes).**  
 
 ::: tip
 Some magic attribute types add additional traits to models. You can set them in `config/fibers.traits`.

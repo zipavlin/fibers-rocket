@@ -9,7 +9,7 @@ This command will create a new [Migration](https://laravel.com/docs/migrations) 
 Command will automatically create pivot table migration files when needed.
 
 ## Attribute Input
-Migration creation is simple, but does require user's help to set appropriate attributes. This multiline input uses simplified (but modified) migration syntax. **Read more about attribute input [**here**](/attributes).**  
+Migration creation is simple, but does require user's help to set appropriate attributes. This multiline input uses simplified (but modified) migration syntax. **Read more about attribute input [**here**](/fibers-rocket/attributes).**  
 
 ## Parameters
 | Parameter | Description |

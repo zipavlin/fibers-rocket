@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo-rocket-big.svg
 actionText: Check commands →
-actionLink: /docs/
+actionLink: /commands/ignite
 features:
 - title: Build for developers
   details: Fibers Rocket is build to make your development easier by automating usual stuff so you can focus on your magic.
@@ -13,7 +13,7 @@ features:
 footer: MIT Licensed | Copyright © 2019-present Žiga Pavlin
 ---
 
-<img src='/rocket.gif' style='display:block;margin-left:auto;margin-right:auto;'>
+<img src='https://zipavlin.github.io/fibers-rocket/rocket.gif' style='display:block;margin-left:auto;margin-right:auto;'>
 
 ## Short Introduction
 **This package is in public alpha.**
@@ -33,24 +33,24 @@ php artisan fibers --list
 ```
 
 ## Commands
-<input type="checkbox" checked disabled> [Ignite](/commands/ignite) - bootstrap your app with common steps  
-<input type="checkbox" checked disabled> [Create](/commands/create) - batch create mvc  
-<input type="checkbox" checked disabled> [Model](/commands/model) - create a model  
-<input type="checkbox" checked disabled> [Controller](/commands/controller) - create a controller  
-<input type="checkbox" checked disabled> [Layout](/commands/layout) - create a layout views  
-<input type="checkbox" checked disabled> [Route](/commands/route) - create a route  
-<input type="checkbox" checked disabled> [Migration](/commands/migration) - create a migration  
-<input type="checkbox" checked disabled> [Guard](/commands/guard) - create a guard  
-<input type="checkbox" checked disabled> [Language](/commands/language) - add a new language  
-<input type="checkbox" checked disabled> [Pivot](/commands/pivot) - create a pivot table  
+<input type="checkbox" checked disabled> [Ignite](/fibers-rocket/commands/ignite) - bootstrap your app with common steps  
+<input type="checkbox" checked disabled> [Create](/fibers-rocket/commands/create) - batch create mvc  
+<input type="checkbox" checked disabled> [Model](/fibers-rocket/commands/model) - create a model  
+<input type="checkbox" checked disabled> [Controller](/fibers-rocket/commands/controller) - create a controller  
+<input type="checkbox" checked disabled> [Layout](/fibers-rocket/commands/layout) - create a layout views  
+<input type="checkbox" checked disabled> [Route](/fibers-rocket/commands/route) - create a route  
+<input type="checkbox" checked disabled> [Migration](/fibers-rocket/commands/migration) - create a migration  
+<input type="checkbox" checked disabled> [Guard](/fibers-rocket/commands/guard) - create a guard  
+<input type="checkbox" checked disabled> [Language](/fibers-rocket/commands/language) - add a new language  
+<input type="checkbox" checked disabled> [Pivot](/fibers-rocket/commands/pivot) - create a pivot table  
 <input type="checkbox" disabled> Policy - create a policy file  
 <input type="checkbox" disabled> User - set up a new user model with auth  
 <input type="checkbox" disabled> Role - add role to user model  
 
 
 ## Read More
-- [Introduction](/guide#introduction)
-- [Requirements](/guide#requirements)
-- [Installation](/guide#installation)
-- [Usage](/guide#usage)
-- [Contributing](/guide#contributing)
+- [Introduction](/fibers-rocket/guide#introduction)
+- [Requirements](/fibers-rocket/guide#requirements)
+- [Installation](/fibers-rocket/guide#installation)
+- [Usage](/fibers-rocket/guide#usage)
+- [Contributing](/fibers-rocket/guide#contributing)
