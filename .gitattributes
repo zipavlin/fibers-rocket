@@ -1,10 +1,10 @@
 /docs export-ignore
 /tests export-ignore
+.circleci/ export-ignore
 .gitattributes export-ignore
 .gitignore export-ignore
 package.json export-ignore
 yarn.lock export-ignore
 yarn-error.log export-ignore
 npm.lock export-ignore
-CHANGELOG.md
 CONTRIBUTING.md
