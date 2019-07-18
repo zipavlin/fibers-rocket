@@ -1,7 +1,7 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Fibers migration command [php artisan fibers:migration <Title> [Options]]
+| Fibers make:migration command [php artisan fibers:make:migration <Title> [Options]]
 |--------------------------------------------------------------------------
 |
 | This command will create a new migration and optionally continue to
@@ -51,7 +51,7 @@ use Illuminate\Support\Str;
 
 class Migration extends Command
 {
-    protected $signature =  'fibers:migration
+    protected $signature =  'fibers:make:migration
                             {title : Title of migration}
                             {--L|last : Set migration file\'s name so it is migrated at the end }
                             {--M|model : Create model file as well }
@@ -168,7 +168,7 @@ class Migration extends Command
         $this->continue("model", function () {
             if (!ModelsHelper::exists(Str::studly(class_basename($this->migration_title)))) {
                 if ($this->confirm("Do you want to create model file for this migration?", "yes")) {
-                    $this->call("fibers:model", ["title" => $this->migration_title, "--input" => $this->migration_fields, "--silent" => $this->silent, "--force" => $this->force, '--ignore' => ['migration']]);
+                    $this->call("fibers:make:model", ["title" => $this->migration_title, "--input" => $this->migration_fields, "--silent" => $this->silent, "--force" => $this->force, '--ignore' => ['migration']]);
                 }
             }
         });
@@ -300,7 +300,7 @@ class Migration extends Command
             $target = Str::snake(class_basename($item->options->target ?? ModelsHelper::class($item->name)));
 
             // run command to create pivot table
-            $this->callDelayed('fibers:pivot', ["model" => [$model, $target]]);
+            $this->callDelayed('fibers:make:pivot', ["model" => [$model, $target]]);
         }
         return null;
     }

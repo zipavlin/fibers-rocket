@@ -18,16 +18,16 @@ module.exports = {
             {
                 text: 'Commands',
                 items: [
-                    { text: 'Ignite', link: '/commands/ignite' },
-                    { text: 'Create', link: '/commands/create' },
-                    { text: 'Model', link: '/commands/model' },
-                    { text: 'Controller', link: '/commands/controller' },
-                    { text: 'Layout', link: '/commands/layout' },
-                    { text: 'Route', link: '/commands/route' },
-                    { text: 'Migration', link: '/commands/migration' },
-                    { text: 'Guard', link: '/commands/guard' },
-                    { text: 'Language', link: '/commands/language' },
-                    { text: 'Pivot', link: '/commands/pivot' },
+                    { text: 'Setup App', link: '/commands/app' },
+                    { text: 'Create MVC', link: '/commands/create' },
+                    { text: 'Make Model', link: '/commands/model' },
+                    { text: 'Make Controller', link: '/commands/controller' },
+                    { text: 'Make Layout', link: '/commands/layout' },
+                    { text: 'Make Route', link: '/commands/route' },
+                    { text: 'Make Migration', link: '/commands/migration' },
+                    { text: 'Make Guard', link: '/commands/guard' },
+                    { text: 'Make Language', link: '/commands/language' },
+                    { text: 'Make Pivot', link: '/commands/pivot' },
                 ]
             },
             { text: 'Attribute Input', link: '/attributes' },
@@ -38,7 +38,7 @@ module.exports = {
             {
                 title: 'Commands',
                 children: [
-                    '/commands/ignite',
+                    '/commands/app',
                     '/commands/create',
                     '/commands/model',
                     '/commands/controller',

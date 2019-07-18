@@ -1,7 +1,7 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Fibers language command [php artisan fibers:language <Title>]
+| Fibers make:language command [php artisan fibers:make:language <Title>]
 |--------------------------------------------------------------------------
 |
 | Language command will setup a new language, creating a new language folder,
@@ -16,7 +16,7 @@ use Illuminate\Support\Str;
 
 class Language extends Command
 {
-    protected $signature =  'fibers:language
+    protected $signature =  'fibers:make:language
                             {title : Language name or code }';
     protected $description = 'Set up translation files for a new language';
 

@@ -1,7 +1,7 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Fibers model command [php artisan fibers:model Name]
+| Fibers make:model command [php artisan fibers:make:model Name]
 |--------------------------------------------------------------------------
 |
 | This command will create a new model and optionally continue to
@@ -48,7 +48,7 @@ use Illuminate\Support\Str;
 
 class Model extends Command
 {
-    protected $signature =  'fibers:model
+    protected $signature =  'fibers:make:model
                             {title : Title of model}
                             {--M|migration : Create migration file as well }
                             {--input= : Array of attributes (used mostly when calling from other commands)}';

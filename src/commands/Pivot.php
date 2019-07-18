@@ -1,7 +1,7 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Fibers pivot command [php artisan fibers:pivot ModelName1 ModelName2]
+| Fibers make:pivot command [php artisan fibers:make:pivot ModelName1 ModelName2]
 |--------------------------------------------------------------------------
 |
 | This command will create a pivot table from two related models.
@@ -18,7 +18,7 @@ use Illuminate\Support\Str;
 
 class Pivot extends Command
 {
-    protected $signature =  'fibers:pivot
+    protected $signature =  'fibers:make:pivot
                             {model* : Name of models}
                             {--column=* : Additional pivot columns}';
     protected $description = 'Create Laravel pivot table migration';
@@ -77,7 +77,7 @@ class Pivot extends Command
                 }
 
                 // run migration command to create new migration
-                $this->call('fibers:migration', $arguments);
+                $this->call('fibers:make:migration', $arguments);
             }
         }
     }

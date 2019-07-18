@@ -1,7 +1,7 @@
-# Pivot
+# Make Pivot
 
 ```bash
-php artisan fibers:pivot <Model> <Model>
+php artisan fibers:make:pivot <Model> <Model>
 ```
 
 Pivot command will create a pivot table, connection two model. It runs [migration command](/fibers-rocket/commands/migration) internally.

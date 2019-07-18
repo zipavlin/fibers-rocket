@@ -97,7 +97,7 @@ class Create extends Command
     {
         $prompt = $prompt ?? "Would you like to create $name?";
         if (in_array($name, $this->create_commands->toArray()) or (!$this->create_skip_questions and !$this->silent and $this->confirm($prompt, "yes"))) {
-            $this->call("fibers:$name", array_merge([
+            $this->call("fibers:make:$name", array_merge([
                 "title" => $this->create_title,
                 "--force" => $this->force,
                 "--silent" => $this->silent

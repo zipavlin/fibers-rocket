@@ -1,7 +1,7 @@
-# Language
+# Make Language
 
 ```bash
-php artisan fibers:language <Title>
+php artisan fibers:make:language <Title>
 ```
 
 Language command will setup a new [language](https://laravel.com/docs/localization), creating a new language folder, automatically downloading standard language files and copying custom files.

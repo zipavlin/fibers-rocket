@@ -1,7 +1,7 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Fibers ignite command [php artisan fibers:ignite <Title> [Options]]
+| Fibers setup:app command [php artisan fibers:setup:app [Options]]
 |--------------------------------------------------------------------------
 |
 | Fibers Rocket - Ignite will bootstrap your fresh install of Laravel
@@ -18,9 +18,9 @@ use Fibers\Helper\Facades\ViewHelper;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
 
-class Ignite extends Command
+class App extends Command
 {
-    protected $signature =  'fibers:ignite
+    protected $signature =  'fibers:setup:app
                             {--A|auth : Set up Laravel auth }
                             {--M|models : Set up \'Models\' folder }
                             {--L|layouts : Set up layout views }
@@ -187,7 +187,7 @@ class Ignite extends Command
                 })
                 ->delete('en')
                 ->each(function ($lang) {
-                    $this->call("fibers:language", ["title" => $lang]);
+                    $this->call("fibers:make:language", ["title" => $lang]);
                 });
 
             if ($languages->count()) {

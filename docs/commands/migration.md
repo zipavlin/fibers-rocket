@@ -1,7 +1,7 @@
-# Migration
+# Make Migration
 
 ```bash
-php artisan fibers:migration <Title> [Options]
+php artisan fibers:make:migration <Title> [Options]
 ```
 
 This command will create a new [Migration](https://laravel.com/docs/migrations) and optionally continue to creating a model. It tries to speed up migration creation by automatically filling usual boilerplate parts.

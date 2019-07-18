@@ -1,7 +1,7 @@
-# Model
+# Make Model
 
 ```bash
-php artisan fibers:model <Title> [Options]
+php artisan fibers:make:model <Title> [Options]
 ```
 
 Fibers Rocket considers [Models](https://laravel.com/docs/eloquent) to be a first-class citizens (alongside its table) and are it's entry point into your application when fetching required information. Models are used to smartly populate data when creating controllers, layours, guards, etc.  

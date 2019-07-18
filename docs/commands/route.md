@@ -1,7 +1,7 @@
-# Route
+# Make Route
 
 ```bash
-php artisan fibers:route <Title> [Options]
+php artisan fibers:make:route <Title> [Options]
 ```
 
 This command will append a new [Route](https://laravel.com/docs/routing) to file set in `config/fibers.routes` (defaults to `routes/web.php`).  

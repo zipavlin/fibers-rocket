@@ -1,7 +1,7 @@
-# Guard
+# Make Guard
 
 ```bash
-php artisan fibers:guard <Title> [Options]
+php artisan fibers:make:guard <Title> [Options]
 ```
 
 Guard command will create a [FormRequest](https://laravel.com/docs/validation#form-request-validation), automatically populating _rules_ array with attributes collected from a [model](/fibers-rocket/commands/model).

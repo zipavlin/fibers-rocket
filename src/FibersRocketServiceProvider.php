@@ -4,7 +4,7 @@ namespace Fibers\Rocket;
 
 use Fibers\Rocket\Commands\Create;
 use Illuminate\Support\ServiceProvider;
-use Fibers\Rocket\Commands\Ignite;
+use Fibers\Rocket\Commands\App;
 use Fibers\Rocket\Commands\Controller;
 use Fibers\Rocket\Commands\Guard;
 use Fibers\Rocket\Commands\Language;
@@ -29,7 +29,7 @@ class FibersRocketServiceProvider extends ServiceProvider
         // register commands
         if ($this->app->runningInConsole()) {
             $this->commands([
-                Ignite::class,
+                App::class,
                 Model::class,
                 Migration::class,
                 Pivot::class,

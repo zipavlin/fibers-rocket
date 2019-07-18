@@ -1,7 +1,7 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Fibers model command [php artisan fibers:model Name]
+| Fibers make:guard command [php artisan fibers:make:guard Name]
 |--------------------------------------------------------------------------
 |
 | This command will create a FormRequest, automatically population rules
@@ -18,7 +18,7 @@ use Illuminate\Support\Str;
 
 class Guard extends Command
 {
-    protected $signature =  'fibers:guard
+    protected $signature =  'fibers:make:guard
                             {title : Title of guard}
                             {--target= : Target model }';
     protected $description = 'Create Laravel FormRequest';

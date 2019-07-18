@@ -1,7 +1,7 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Fibers layout command [php artisan fibers:layout <Title> [Options]]
+| Fibers make:layout command [php artisan fibers:make:layout <Title> [Options]]
 |--------------------------------------------------------------------------
 |
 | This command will create layout views for a model.
@@ -18,7 +18,7 @@ use Illuminate\Support\Str;
 
 class Layout extends Command
 {
-    protected $signature =  'fibers:layout
+    protected $signature =  'fibers:make:layout
                             {title : Title of layout folder}
                             {--C|controller : Create controller file as well }
                             {--bootstrap : Use bootstrap template }

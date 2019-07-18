@@ -1,7 +1,7 @@
-# Controller
+# Make Controller
 
 ```bash
-php artisan fibers:controller <Title> [Options]
+php artisan fibers:make:controller <Title> [Options]
 ```
 
 This command will create a new [Controller](https://laravel.com/docs/controllers) and optionally continue creating a guard, route, layout and/or model. It tries to speed up controller creation by automatically filling usual boilerplate parts.

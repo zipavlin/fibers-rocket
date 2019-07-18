@@ -1,7 +1,7 @@
-# Layout
+# Make Layout
 
 ```bash
-php artisan fibers:layout <Title> [Options]
+php artisan fibers:make:layout <Title> [Options]
 ```
 
 This command will create layout [Views](https://laravel.com/docs/views) in path set in `config/view.paths` into a new folder named after targeted model.  

@@ -1,7 +1,7 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Fibers route command [php artisan fibers:route <Title> [Options]]
+| Fibers make:route command [php artisan fibers:make:route <Title> [Options]]
 |--------------------------------------------------------------------------
 |
 | This command will create a new model and optionally continue to
@@ -19,7 +19,7 @@ use Illuminate\Support\Str;
 
 class Route extends Command
 {
-    protected $signature =  'fibers:route
+    protected $signature =  'fibers:make:route
                             {title : Title of route}
                             {--C|controller : Create controller file as well }
                             {--target= : Target model }

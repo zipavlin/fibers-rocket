@@ -1,7 +1,7 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Fibers controller command [php artisan fibers:controller <Title> [Options]]
+| Fibers make:controller command [php artisan fibers:make:controller <Title> [Options]]
 |--------------------------------------------------------------------------
 |
 | This command will create a new controller and optionally continue to
@@ -21,7 +21,7 @@ use Illuminate\Support\Str;
 
 class Controller extends Command
 {
-    protected $signature =  'fibers:controller
+    protected $signature =  'fibers:make:controller
                             {title : Title of controller}
                             {--G|guard : Create and use guarded request }
                             {--R|route : Add controller to routes }
@@ -77,12 +77,12 @@ class Controller extends Command
         $this->continue("model", function () {
             if (!ModelsHelper::exists(Str::studly(class_basename($this->controller_title)))) {
                 if ($this->confirm("Do you want to create model file for this controller?", "yes")) {
-                    $this->call("fibers:model", ["title" => $this->controller_title, "--silent" => $this->silent, "--force" => $this->force, '--ignore' => ['controller']]);
+                    $this->call("fibers:make:model", ["title" => $this->controller_title, "--silent" => $this->silent, "--force" => $this->force, '--ignore' => ['controller']]);
                 }
             }
         });
         if ($this->controller_request and !in_array('guard', $this->option('ignore'))) {
-            $this->call("fibers:guard", ["title" => $this->controller_title]);
+            $this->call("fibers:make:guard", ["title" => $this->controller_title]);
         }
     }
 

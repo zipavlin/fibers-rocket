@@ -1,7 +1,7 @@
-# Ignite
+# Setup App
 
 ```bash
-php artisan fibers:ignite [Options]
+php artisan fibers:setup:app [Options]
 ```
 
 Fibers Rocket - Ignite will bootstrap your fresh install of Laravel and deal with some (optional) common first steps:
