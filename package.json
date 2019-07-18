@@ -1,11 +1,4 @@
 {
-    "name": "fibers-rocket",
-    "version": "0.0.1",
-    "description": "Laravel development tool for rapid app development with smart model, migration, controller and views scaffolding.",
-    "main": "index.js",
-    "author": "Žiga Pavlin",
-    "license": "MIT",
-    "private": false,
     "scripts": {
         "docs:dev": "vuepress dev docs",
         "docs:build": "vuepress build docs"
