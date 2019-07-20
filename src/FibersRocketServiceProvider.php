@@ -23,9 +23,6 @@ class FibersRocketServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // register required service providers
-        $this->app->register('Fibers\Helper\FibersHelperServiceProvider');
-
         // register commands
         if ($this->app->runningInConsole()) {
             $this->commands([
