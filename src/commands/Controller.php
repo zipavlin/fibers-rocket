@@ -63,15 +63,15 @@ class Controller extends Command
             "title" => $this->controller_title,
             "--ignore" => ['controller'],
             "--target" => $this->controller_title,
-            "--only" => $this->controller_only_actions->join(","),
-            "--except" => $this->controller_except_actions->join(",")
+            "--only" => !blank($this->controller_only_actions) ? $this->controller_only_actions->join(",") : false,
+            "--except" => !blank($this->controller_except_actions) ? $this->controller_except_actions->join(",") : false
         ]);
         $this->continue("layout", [
             "title" => $this->controller_title,
             "--ignore" => ['controller'],
             "--paginated" => $this->option("paginated"),
-            "--only" => $this->controller_only_actions->join(","),
-            "--except" => $this->controller_except_actions->join(","),
+            "--only" => !blank($this->controller_only_actions) ? $this->controller_only_actions->join(",") : false,
+            "--except" => !blank($this->controller_except_actions) ? $this->controller_except_actions->join(",") : false,
             "--target" => $this->controller_title
         ]);
         $this->continue("model", function () {

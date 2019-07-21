@@ -53,8 +53,8 @@ class Route extends Command
             "title" => $this->route_title,
             "--target" => $this->route_target,
             "--ignore" => ['route'],
-            "--only" => $this->route_only_actions->toArray(),
-            "--except" => $this->route_except_actions->toArray()
+            "--only" => !blank($this->route_only_actions) ? $this->route_only_actions->join(",") : false,
+            "--except" => !blank($this->route_except_actions) ? $this->route_except_actions->join(",") : false
         ]);
     }
 

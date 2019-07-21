@@ -56,8 +56,8 @@ class Layout extends Command
         $this->continue("controller", [
             "title" => $this->layout_title,
             "--paginated" => $this->option("paginated"),
-            "--only" => $this->layout_only_actions->join(","),
-            "--except" => $this->layout_except_actions->join(","),
+            "--only" => !blank($this->layout_only_actions) ? $this->layout_only_actions->join(",") : false,
+            "--except" => !blank($this->layout_except_actions) ? $this->layout_except_actions->join(",") : false,
             "--target" => $this->option("target"),
             "--ignore" => ['layout']
         ]);

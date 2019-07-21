@@ -266,7 +266,7 @@ class Command extends BaseCommand
             if ($this->silent) {
                 return ModelsHelper::class($title);
             } else {
-                return $this->ask("What model this layout belongs to?", ModelsHelper::search($title)->class());
+                return $this->ask("What model this belongs to?", ModelsHelper::search($title)->class());
             }
         }
     }
@@ -279,7 +279,10 @@ class Command extends BaseCommand
     protected function getOnlyActions(string $target = null)
     {
         // get input
-        if (!($input = $this->option("only"))) {
+        if ($this->option("only") === false) {
+            $input = [];
+        }
+        elseif (!($input = $this->option("only"))) {
             // try to get existing actions
             $input = $this->getControllerActions($target)->join(",");
             if (!$this->silent) {
@@ -303,7 +306,10 @@ class Command extends BaseCommand
     protected function getExceptActions(string $target = null)
     {
         // get input
-        if (!($input = $this->option("except"))) {
+        if ($this->option("except") === false) {
+            $input = [];
+        }
+        elseif (!($input = $this->option("except"))) {
             // try to get existing actions
             $input = $this->getControllerActions($target)->diff(['index', 'create', 'store', 'show', 'edit', 'update', 'destroy'])->join(",");
             if (!$this->silent) {
