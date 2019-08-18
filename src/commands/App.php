@@ -271,7 +271,7 @@ class App extends Command
 
     private function prompt(string $message, \Closure $closure, $option = false)
     {
-        if ($this->option($option) or $this->confirm($message, "yes")) {
+        if (($option && $this->option($option)) or $this->confirm($message, "yes")) {
             $closure();
         }
     }
