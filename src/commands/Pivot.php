@@ -62,7 +62,7 @@ class Pivot extends Command
                     ));
 
                 // prepare arguments
-                $arguments = ["name" => $table, "--input" => $input, "--table" => $table, "--silent" => true];
+                $arguments = ["title" => $table, "--input" => $input, "--table" => $table, "--silent" => true];
 
                 // check if both relevant migration files exists else push this one to the end so we don't break migration
                 $tables = $this->models->map(function ($model) {
