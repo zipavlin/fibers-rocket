@@ -158,8 +158,8 @@ class App extends Command
             $this->prompt("Do you want to create app layout, header and footer?", function () {
                 // create header & footer components
                 if ($componentsPath = ViewHelper::componentsPath()) {
-                    TemplateHelper::fromFile(FIBERS_ROCKET."/templates/views/partial/header.stub")->replace()->tofile($componentsPath.DIRECTORY_SEPARATOR.'header.blade.php');
-                    TemplateHelper::fromFile(FIBERS_ROCKET."/templates/views/partial/footer.stub")->replace()->tofile($componentsPath.DIRECTORY_SEPARATOR.'footer.blade.php');
+                    TemplateHelper::fromFile(FIBERS_ROCKET."/templates/views/partials/header.stub")->replace()->tofile($componentsPath.DIRECTORY_SEPARATOR.'header.blade.php');
+                    TemplateHelper::fromFile(FIBERS_ROCKET."/templates/views/partials/footer.stub")->replace()->tofile($componentsPath.DIRECTORY_SEPARATOR.'footer.blade.php');
                     $this->infoDelayed("Header and footer components were created [resources/".basename(ViewHelper::path())."/".basename($componentsPath)."/]","success");
                 }
 
